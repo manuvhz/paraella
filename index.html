@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💖</text></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Ella 💖</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #F8F5FF;
+        font-family: 'Inter', sans-serif;
+        color: #3B3054;
+        animation: fade-in 1s ease-out forwards;
+      }
+      .font-playfair { font-family: 'Playfair Display', serif; }
+      .font-dancing { font-family: 'Dancing Script', cursive; }
+
+      /* Custom Cursor Styles */
+      body.custom-cursor, body.custom-cursor * {
+        cursor: none;
+      }
+      .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #6B46C1;
+      }
+      .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #9F7AEA;
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { translateY(0px); }
+      }
+      
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes particle-float {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+      }
+
+      @keyframes compliment-pop {
+        0% { transform: scale(0.9); opacity: 0; }
+        50% { transform: scale(1.05); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+
+      .animate-compliment-pop {
+        animation: compliment-pop 0.5s ease-out forwards;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .animate-bounce-slow {
+        animation: bounce 2s infinite;
+      }
+      
+      /* New Pulse Animation for Timeline Dots */
+      @keyframes pulse-dot {
+        0%, 100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(107, 70, 193, 0.7);
+        }
+        50% {
+          transform: scale(1.1);
+          box-shadow: 0 0 0 10px rgba(107, 70, 193, 0);
+        }
+      }
+      .animate-pulse-dot {
+        animation: pulse-dot 2s infinite;
+      }
+      
+      /* New Glow Effect for Cards */
+      .card-glow:hover {
+        box-shadow: 0 10px 15px -3px rgba(244, 114, 182, 0.2), 0 4px 6px -2px rgba(244, 114, 182, 0.1);
+      }
+
+      /* Scroll Reveal Animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Treasure Box Animations */
+      @keyframes open-lid {
+        0% { transform: rotateX(0deg); }
+        100% { transform: rotateX(-110deg); }
+      }
+      .animate-open-lid {
+        animation: open-lid 0.7s ease-out forwards;
+      }
+      
+      @keyframes reveal-contents {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .animate-reveal-contents > * {
+        opacity: 0;
+        animation: reveal-contents 0.5s ease-out forwards;
+      }
+
+      /* Starry Sky Animation */
+       @keyframes twinkle {
+        0% { opacity: 0.2; }
+        50% { opacity: 1; }
+        100% { opacity: 0.2; }
+      }
+      .animate-twinkle {
+        animation: twinkle 4s infinite;
+      }
+
+      /* Fade-in on load */
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      /* Time Capsule Animations */
+      @keyframes seal-capsule {
+        0% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.2); opacity: 0.7; box-shadow: 0 0 20px 10px rgba(196, 181, 253, 0.7); }
+        100% { transform: scale(0) translateY(-100px); opacity: 0; }
+      }
+
+      @keyframes fade-in-slow {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="custom-cursor">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
